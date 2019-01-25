@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AA7CE1A21FB2806008A39AE /* ResNet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1AA7CE1821FB2806008A39AE /* ResNet50.mlmodel */; };
+		1AA7CE1B21FB2806008A39AE /* VGG16.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1AA7CE1921FB2806008A39AE /* VGG16.mlmodel */; };
 		1AD7E90121F74C46008E3EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD7E90021F74C46008E3EB9 /* AppDelegate.swift */; };
 		1AD7E90321F74C46008E3EB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD7E90221F74C46008E3EB9 /* ViewController.swift */; };
 		1AD7E90621F74C46008E3EB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD7E90421F74C46008E3EB9 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AA7CE1821FB2806008A39AE /* ResNet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ResNet50.mlmodel; sourceTree = "<group>"; };
+		1AA7CE1921FB2806008A39AE /* VGG16.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = VGG16.mlmodel; sourceTree = "<group>"; };
 		1AD7E8FD21F74C46008E3EB9 /* NameItPlease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameItPlease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD7E90021F74C46008E3EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AD7E90221F74C46008E3EB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 		1AD7E91A21F75D5E008E3EB9 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				1AA7CE1821FB2806008A39AE /* ResNet50.mlmodel */,
+				1AA7CE1921FB2806008A39AE /* VGG16.mlmodel */,
 				1AD7E92521F8921E008E3EB9 /* MobileNet.mlmodel */,
 				1AD7E92721F8A1B8008E3EB9 /* NASNetMobile.mlmodel */,
 			);
@@ -153,7 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AD7E92021F76D61008E3EB9 /* Collection+SafeAccess.swift in Sources */,
+				1AA7CE1B21FB2806008A39AE /* VGG16.mlmodel in Sources */,
 				1AD7E90321F74C46008E3EB9 /* ViewController.swift in Sources */,
+				1AA7CE1A21FB2806008A39AE /* ResNet50.mlmodel in Sources */,
 				1AD7E92821F8A1B8008E3EB9 /* NASNetMobile.mlmodel in Sources */,
 				1AD7E90121F74C46008E3EB9 /* AppDelegate.swift in Sources */,
 				1AD7E92621F8921E008E3EB9 /* MobileNet.mlmodel in Sources */,
