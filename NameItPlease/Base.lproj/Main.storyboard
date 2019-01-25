@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NameItPlease" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7S-On-HTZ" userLabel="Camera View">
+                                <rect key="frame" x="16" y="40" width="343" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="sRT-Pr-YJz"/>
+                                    <constraint firstAttribute="height" constant="216" id="sWU-eo-fST"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u3Q-SJ-bbD" userLabel="ResNet50 Container View">
+                                <rect key="frame" x="8" y="264" width="359" height="85"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="uxt-JU-V5C" userLabel="ResNet50 Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="85"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ResNet50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anz-1L-ugu" userLabel="ResNet50 Name Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="28.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.198409276" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ResNet50 top prediction" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kdj-gI-ZnA" userLabel="ResNet50 Top Prediction Label">
+                                                <rect key="frame" x="0.0" y="28.5" width="359" height="28"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ResNet50 2nd prediction" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wyc-38-e6K" userLabel="ResNet50 Second Prediction Label">
+                                                <rect key="frame" x="0.0" y="56.5" width="359" height="28.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Kxz-fH-S97" userLabel="ResNet50 Activity Indicator">
+                                        <rect key="frame" x="161" y="24" width="37" height="37"/>
+                                        <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="uxt-JU-V5C" secondAttribute="trailing" id="DAX-KD-tBO"/>
+                                    <constraint firstItem="Kxz-fH-S97" firstAttribute="centerY" secondItem="u3Q-SJ-bbD" secondAttribute="centerY" id="IWk-AL-qs2"/>
+                                    <constraint firstAttribute="bottom" secondItem="uxt-JU-V5C" secondAttribute="bottom" id="d94-K0-EvR"/>
+                                    <constraint firstItem="uxt-JU-V5C" firstAttribute="leading" secondItem="u3Q-SJ-bbD" secondAttribute="leading" id="fLT-9B-I2b"/>
+                                    <constraint firstItem="uxt-JU-V5C" firstAttribute="top" secondItem="u3Q-SJ-bbD" secondAttribute="top" id="obb-ze-Wh6"/>
+                                    <constraint firstItem="Kxz-fH-S97" firstAttribute="centerX" secondItem="u3Q-SJ-bbD" secondAttribute="centerX" id="wib-zj-mjk"/>
+                                    <constraint firstAttribute="height" constant="85" id="zeq-kw-aCh"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="c1J-cS-1q4"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZVA-r0-M7T" userLabel="VGG16 Container View">
+                                <rect key="frame" x="8" y="357" width="359" height="85"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="dC6-1p-pvF" userLabel="VGG16 Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="85"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VGG16" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg9-2G-SmY" userLabel="VGG16 Name Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="28.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.198409276" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VGG16 top prediction" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="juP-Gx-484" userLabel="VGG16 Top Prediction Label">
+                                                <rect key="frame" x="0.0" y="28.5" width="359" height="28"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VGG16 2nd prediction" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oj0-tX-MdG" userLabel="VGG16 Second Prediction Label">
+                                                <rect key="frame" x="0.0" y="56.5" width="359" height="28.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sWD-ss-wKI" userLabel="VGG16 Activity Indicator">
+                                        <rect key="frame" x="161" y="24" width="37" height="37"/>
+                                        <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="sWD-ss-wKI" firstAttribute="centerY" secondItem="ZVA-r0-M7T" secondAttribute="centerY" id="26n-5K-S2c"/>
+                                    <constraint firstAttribute="height" constant="85" id="CV7-AT-Ihm"/>
+                                    <constraint firstItem="DXK-CG-mzr" firstAttribute="trailing" secondItem="dC6-1p-pvF" secondAttribute="trailing" id="Onm-Va-yrF"/>
+                                    <constraint firstItem="dC6-1p-pvF" firstAttribute="leading" secondItem="DXK-CG-mzr" secondAttribute="leading" id="bcT-Oy-qpy"/>
+                                    <constraint firstItem="DXK-CG-mzr" firstAttribute="bottom" secondItem="dC6-1p-pvF" secondAttribute="bottom" id="c3g-UB-lUz"/>
+                                    <constraint firstItem="dC6-1p-pvF" firstAttribute="top" secondItem="DXK-CG-mzr" secondAttribute="top" id="fFO-92-KN6"/>
+                                    <constraint firstItem="sWD-ss-wKI" firstAttribute="centerX" secondItem="ZVA-r0-M7T" secondAttribute="centerX" id="pX9-DC-M1t"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="DXK-CG-mzr"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHo-MJ-MlJ" userLabel="NASNetMobile Container View">
+                                <rect key="frame" x="8" y="450" width="359" height="85"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="nN3-1o-dtM" userLabel="NASNetMobile Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="85"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NASNetMobile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAD-rm-rSK" userLabel="NASNetMobile Name Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="28.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.198409276" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NASNetMobile top prediction" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kyt-1w-pLn" userLabel="NASNetMobile Top Prediction Label">
+                                                <rect key="frame" x="0.0" y="28.5" width="359" height="28"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NASNetMobile 2nd prediction" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HOS-28-ZGn" userLabel="NASNetMobile Second Prediction Label">
+                                                <rect key="frame" x="0.0" y="56.5" width="359" height="28.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="By0-B6-cOn" userLabel="NASNetMobile Activity Indicator">
+                                        <rect key="frame" x="161" y="24" width="37" height="37"/>
+                                        <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="kTo-QT-N8R" firstAttribute="trailing" secondItem="nN3-1o-dtM" secondAttribute="trailing" id="4w5-1d-S4e"/>
+                                    <constraint firstItem="By0-B6-cOn" firstAttribute="centerX" secondItem="NHo-MJ-MlJ" secondAttribute="centerX" id="AIX-ca-dw1"/>
+                                    <constraint firstItem="nN3-1o-dtM" firstAttribute="leading" secondItem="kTo-QT-N8R" secondAttribute="leading" id="KE6-X1-K57"/>
+                                    <constraint firstItem="nN3-1o-dtM" firstAttribute="top" secondItem="kTo-QT-N8R" secondAttribute="top" id="P49-ex-Vvo"/>
+                                    <constraint firstItem="kTo-QT-N8R" firstAttribute="bottom" secondItem="nN3-1o-dtM" secondAttribute="bottom" id="aOj-0h-ejX"/>
+                                    <constraint firstItem="By0-B6-cOn" firstAttribute="centerY" secondItem="NHo-MJ-MlJ" secondAttribute="centerY" id="wml-1b-bUj"/>
+                                    <constraint firstAttribute="height" constant="85" id="zub-o5-e2O"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="kTo-QT-N8R"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9T-n9-m1V" userLabel="MobileNet Container View">
+                                <rect key="frame" x="8" y="543" width="359" height="85"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="nZB-hK-GXO" userLabel="MobileNet Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="85"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MobileNet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00v-9l-iFZ" userLabel="MobileNet Name Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="28.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.198409276" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MobileNet top prediction" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xhh-HP-MtV" userLabel="MobileNet Top Prediction Label">
+                                                <rect key="frame" x="0.0" y="28.5" width="359" height="28"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MobileNet 2nd prediction" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bIc-06-xrG" userLabel="MobileNet Second Prediction Label">
+                                                <rect key="frame" x="0.0" y="56.5" width="359" height="28.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WwU-Ow-WtN" userLabel="MobileNet Activity Indicator">
+                                        <rect key="frame" x="161" y="24" width="37" height="37"/>
+                                        <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="WwU-Ow-WtN" firstAttribute="centerX" secondItem="q9T-n9-m1V" secondAttribute="centerX" id="GM7-nR-cZd"/>
+                                    <constraint firstItem="nZB-hK-GXO" firstAttribute="top" secondItem="P0w-fk-Bam" secondAttribute="top" id="JFR-Ri-ANK"/>
+                                    <constraint firstItem="P0w-fk-Bam" firstAttribute="bottom" secondItem="nZB-hK-GXO" secondAttribute="bottom" id="NgT-Qi-0kr"/>
+                                    <constraint firstAttribute="height" constant="85" id="U3K-G6-xaw"/>
+                                    <constraint firstItem="nZB-hK-GXO" firstAttribute="leading" secondItem="P0w-fk-Bam" secondAttribute="leading" id="UJD-g9-vLq"/>
+                                    <constraint firstItem="P0w-fk-Bam" firstAttribute="trailing" secondItem="nZB-hK-GXO" secondAttribute="trailing" id="aw0-bC-EwY"/>
+                                    <constraint firstItem="WwU-Ow-WtN" firstAttribute="centerY" secondItem="q9T-n9-m1V" secondAttribute="centerY" id="g7h-P5-ZJe"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="P0w-fk-Bam"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NHo-MJ-MlJ" firstAttribute="top" secondItem="ZVA-r0-M7T" secondAttribute="bottom" constant="8" id="0Xx-R4-AOS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NHo-MJ-MlJ" secondAttribute="trailing" constant="8" id="2Pe-EI-wB1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u3Q-SJ-bbD" secondAttribute="trailing" constant="8" id="2Za-kp-bbV"/>
+                            <constraint firstItem="NHo-MJ-MlJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="50v-B7-oG0"/>
+                            <constraint firstItem="C7S-On-HTZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7u5-bm-wUK"/>
+                            <constraint firstItem="u3Q-SJ-bbD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="9wp-ug-d09"/>
+                            <constraint firstItem="C7S-On-HTZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BY6-2e-3Wt"/>
+                            <constraint firstItem="u3Q-SJ-bbD" firstAttribute="top" secondItem="C7S-On-HTZ" secondAttribute="bottom" constant="8" id="BwY-3M-LEl"/>
+                            <constraint firstItem="ZVA-r0-M7T" firstAttribute="top" secondItem="u3Q-SJ-bbD" secondAttribute="bottom" constant="8" id="UaC-9a-tsm"/>
+                            <constraint firstItem="q9T-n9-m1V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Yb2-z0-D1r"/>
+                            <constraint firstItem="ZVA-r0-M7T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="jGP-LZ-9i5"/>
+                            <constraint firstItem="q9T-n9-m1V" firstAttribute="top" secondItem="NHo-MJ-MlJ" secondAttribute="bottom" constant="8" id="pRu-gg-8Xa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZVA-r0-M7T" secondAttribute="trailing" constant="8" id="qTU-o5-6aA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q9T-n9-m1V" secondAttribute="trailing" constant="8" id="yQL-RG-ons"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="C7S-On-HTZ" id="Elu-8O-j6M"/>
+                        <outlet property="mobileNetActivityIndicatorView" destination="WwU-Ow-WtN" id="dSq-MK-Xz4"/>
+                        <outlet property="mobileNetLabel" destination="00v-9l-iFZ" id="vQb-pa-xmZ"/>
+                        <outlet property="mobileNetSecondPredictionLabel" destination="bIc-06-xrG" id="oyC-Sx-L9x"/>
+                        <outlet property="mobileNetStackView" destination="nZB-hK-GXO" id="dgi-iU-JdS"/>
+                        <outlet property="mobileNetTopPredictionLabel" destination="xhh-HP-MtV" id="ONe-lh-cQ1"/>
+                        <outlet property="nasNetMobileActivityIndicatorView" destination="By0-B6-cOn" id="qWm-ge-P3f"/>
+                        <outlet property="nasNetMobileLabel" destination="mAD-rm-rSK" id="BLB-mK-QrE"/>
+                        <outlet property="nasNetMobileSecondPredictionLabel" destination="HOS-28-ZGn" id="mC1-Zx-5Tk"/>
+                        <outlet property="nasNetMobileStackView" destination="nN3-1o-dtM" id="ckl-eU-wqe"/>
+                        <outlet property="nasNetMobileTopPredictionLabel" destination="Kyt-1w-pLn" id="CdJ-m7-ffl"/>
+                        <outlet property="resNet50ActivityIndicatorView" destination="Kxz-fH-S97" id="BDH-zZ-qik"/>
+                        <outlet property="resNet50Label" destination="anz-1L-ugu" id="RHE-Bv-L8e"/>
+                        <outlet property="resNet50SecondPredictionLabel" destination="wyc-38-e6K" id="UZ0-0k-z5C"/>
+                        <outlet property="resNet50StackView" destination="uxt-JU-V5C" id="lrc-rT-wH8"/>
+                        <outlet property="resNet50TopPredictionLabel" destination="kdj-gI-ZnA" id="3Nv-BM-Tgj"/>
+                        <outlet property="vgg16ActivityIndicatorView" destination="sWD-ss-wKI" id="EGC-yo-4JH"/>
+                        <outlet property="vgg16Label" destination="Eg9-2G-SmY" id="A2b-Af-DLj"/>
+                        <outlet property="vgg16SecondPredictionLabel" destination="Oj0-tX-MdG" id="ocH-Vd-NFK"/>
+                        <outlet property="vgg16StackView" destination="dC6-1p-pvF" id="0JN-yW-pRV"/>
+                        <outlet property="vgg16TopPredictionLabel" destination="juP-Gx-484" id="oJz-5T-EDs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="101.19940029985008"/>
+        </scene>
+    </scenes>
+</document>
